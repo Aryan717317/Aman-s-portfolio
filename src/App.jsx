@@ -142,6 +142,17 @@ function App() {
   const [activeSection, setActiveSection] = useState('hero')
   const [terminalOpen, setTerminalOpen] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect mobile devices for performance optimizations
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile, { passive: true })
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     // Check system preference for reduced motion
@@ -255,7 +266,7 @@ function App() {
             {/* Main Content */}
             <main>
               <section id="hero" className="section-animate">
-                <Hero onTerminalOpen={() => setTerminalOpen(true)} />
+                <Hero onTerminalOpen={() => setTerminalOpen(true)} isMobile={isMobile} />
               </section>
               
               <section id="skills" className="section-animate">
@@ -267,7 +278,7 @@ function App() {
               </section>
               
               <section id="ml-visuals" className="section-animate">
-                <MLVisuals />
+                <MLVisuals isMobile={isMobile} />
               </section>
               
               <section id="experience" className="section-animate">

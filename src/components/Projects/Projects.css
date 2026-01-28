@@ -602,17 +602,60 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .project-card {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-period {
+    font-size: 0.75rem;
+  }
+  
+  .tech-tags {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+  
+  .project-highlights li {
+    font-size: 0.8rem;
   }
   
   .modal-container {
-    max-height: 95vh;
+    max-height: 90vh;
+    padding: 20px;
+    margin: 10px;
   }
   
   .modal-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  .modal-content {
+    gap: 20px;
   }
   
   .pipeline-step {
@@ -622,5 +665,32 @@
   
   .step-connector {
     display: none;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 15px;
+  }
+  
+  .modal-container {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  .modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .pipeline-container {
+    padding: 15px;
   }
 }

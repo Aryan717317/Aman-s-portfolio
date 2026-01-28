@@ -358,7 +358,17 @@ function GridFloor() {
   )
 }
 
-const Hero = ({ onTerminalOpen }) => {
+// Simple mobile fallback background
+function MobileFallback() {
+  return (
+    <div className="hero-mobile-bg">
+      <div className="mobile-grid" />
+      <div className="mobile-glow" />
+    </div>
+  )
+}
+
+const Hero = ({ onTerminalOpen, isMobile }) => {
   const { reducedMotion } = useMotion()
   
   const handleDownloadResume = () => {
@@ -401,42 +411,44 @@ ${portfolioData.certifications.map(c => `- ${c.name} (${c.issuer})`).join('\n')}
 
   return (
     <div className="hero">
-      {/* 3D Canvas - Full Screen Background */}
-      <div className="hero-canvas">
-        <CanvasErrorBoundary>
-          <Canvas 
-            camera={{ position: [0, 0, 25], fov: 90 }}
-            dpr={[1, 2]}
-            gl={{ antialias: true, alpha: true }}
-            style={{ width: '100vw', height: '100vh' }}
-          >
-            <Suspense fallback={null}>
-              <color attach="background" args={['#030303']} />
-              <fog attach="fog" args={['#030303', 15, 60]} />
-              
-              <ambientLight intensity={0.2} />
-              <pointLight position={[20, 15, 15]} color="#00ff41" intensity={1.2} />
-              <pointLight position={[-20, -15, -15]} color="#00ffaa" intensity={0.8} />
-              <pointLight position={[0, 0, 20]} color="#00ff41" intensity={0.5} />
-              <pointLight position={[-15, 10, 0]} color="#41ff00" intensity={0.4} />
-              <pointLight position={[15, -10, 0]} color="#00ffff" intensity={0.3} />
-              
-              <NeuralNetwork />
-              {!reducedMotion && <Particles count={400} />}
-              <GridFloor />
-              
-              <OrbitControls 
-                enableZoom={false} 
-                enablePan={false}
-                autoRotate={!reducedMotion}
-                autoRotateSpeed={0.3}
-                maxPolarAngle={Math.PI / 1.8}
-                minPolarAngle={Math.PI / 3}
-              />
-            </Suspense>
-          </Canvas>
-        </CanvasErrorBoundary>
-      </div>
+      {/* 3D Canvas - Full Screen Background (disabled on mobile for performance) */}
+      {!isMobile ? (
+        <div className="hero-canvas">
+          <CanvasErrorBoundary>
+            <Canvas 
+              camera={{ position: [0, 0, 25], fov: 90 }}
+              dpr={[1, 1.5]}
+              gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
+              style={{ width: '100vw', height: '100vh' }}
+              frameloop={reducedMotion ? 'demand' : 'always'}
+            >
+              <Suspense fallback={null}>
+                <color attach="background" args={['#030303']} />
+                <fog attach="fog" args={['#030303', 15, 60]} />
+                
+                <ambientLight intensity={0.2} />
+                <pointLight position={[20, 15, 15]} color="#00ff41" intensity={1.2} />
+                <pointLight position={[-20, -15, -15]} color="#00ffaa" intensity={0.8} />
+                
+                <NeuralNetwork />
+                {!reducedMotion && <Particles count={200} />}
+                <GridFloor />
+                
+                <OrbitControls 
+                  enableZoom={false} 
+                  enablePan={false}
+                  autoRotate={!reducedMotion}
+                  autoRotateSpeed={0.3}
+                  maxPolarAngle={Math.PI / 1.8}
+                  minPolarAngle={Math.PI / 3}
+                />
+              </Suspense>
+            </Canvas>
+          </CanvasErrorBoundary>
+        </div>
+      ) : (
+        <MobileFallback />
+      )}
       
       {/* Hero Content */}
       <div className="hero-content">
@@ -457,7 +469,11 @@ ${portfolioData.certifications.map(c => `- ${c.name} (${c.issuer})`).join('\n')}
         </div>
         
         <p className="hero-description">
-          {portfolioData.summary.slice(0, 150)}...
+          Analytical AI & Machine Learning Engineer in training, operating at the intersection of data, systems, and intelligence.
+          <br /><br />
+          I build scalable ML and NLP solutions using Python, SQL, and cloud infrastructure to extract insight from complex datasets.
+          <br /><br />
+          Focused on turning raw data into high-impact, production-ready intelligent systems.
         </p>
         
         <div className="hero-stats">

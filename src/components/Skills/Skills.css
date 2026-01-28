@@ -337,24 +337,74 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
   }
   
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    padding: 20px;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+  }
+  
+  .skill-items {
+    gap: 6px;
+  }
+  
+  .skill-item {
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
   
   .radar-container {
-    transform: scale(0.8);
+    transform: scale(0.7);
+    margin: 20px auto;
   }
   
   .tech-pipeline {
     flex-direction: column;
+    gap: 10px;
   }
   
   .pipeline-connector {
     transform: rotate(90deg);
+  }
+  
+  .pipeline-stage {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .skill-card {
+    padding: 15px;
+  }
+  
+  .radar-container {
+    transform: scale(0.6);
   }
 }
