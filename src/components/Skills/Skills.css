@@ -1,0 +1,360 @@
+.skills-section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+  z-index: 10;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--matrix-green-dim);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-tag.closing {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--matrix-green);
+  text-shadow: var(--text-glow);
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Radar Chart */
+.skills-radar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.skills-radar.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radar-container {
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 65, 0.05) 0%,
+    rgba(10, 10, 10, 0.8) 50%,
+    rgba(0, 255, 65, 0.03) 100%
+  );
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 40px rgba(0, 255, 65, 0.1),
+    inset 0 0 60px rgba(0, 255, 65, 0.03);
+}
+
+.radar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 65, 0.5),
+    transparent
+  );
+}
+
+.radar-canvas {
+  display: block;
+}
+
+.radar-center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.radar-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--matrix-green);
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px var(--matrix-green);
+  opacity: 0.8;
+}
+
+.radar-subtitle {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.skill-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 8px;
+  padding: 25px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.skill-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover,
+.skill-card.active {
+  border-color: var(--matrix-green);
+  box-shadow: var(--glow-sm);
+  transform: translateY(-5px);
+}
+
+.skill-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--matrix-green);
+}
+
+.skill-level {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--matrix-green);
+  text-shadow: var(--text-glow);
+}
+
+.skill-progress-bar {
+  position: relative;
+  height: 6px;
+  background: rgba(0, 255, 65, 0.1);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--matrix-green-dark), var(--matrix-green));
+  border-radius: 3px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.skill-progress-glow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--matrix-green);
+  border-radius: 50%;
+  box-shadow: var(--glow-md);
+  transition: left 0.5s ease;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  color: var(--matrix-green-dim);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-tag,
+.skill-card.active .skill-tag {
+  background: rgba(0, 255, 65, 0.15);
+  border-color: var(--matrix-green);
+  color: var(--matrix-green);
+}
+
+.skill-card-decoration {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.decoration-line {
+  width: 30px;
+  height: 2px;
+  background: var(--matrix-green-dark);
+}
+
+.decoration-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--matrix-green);
+  border-radius: 50%;
+}
+
+/* Tech Flow / Pipeline */
+.tech-flow {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.5s;
+}
+
+.tech-flow.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-flow-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--matrix-green);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tech-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 30px;
+  background: rgba(0, 255, 65, 0.02);
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  border-radius: 8px;
+}
+
+.pipeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.pipeline-node:hover {
+  border-color: var(--matrix-green);
+  box-shadow: var(--glow-sm);
+  transform: translateY(-5px);
+}
+
+.node-icon {
+  font-size: 1.5rem;
+}
+
+.node-label {
+  font-size: 0.8rem;
+  color: var(--matrix-green-dim);
+  white-space: nowrap;
+}
+
+.pipeline-connector {
+  display: flex;
+  align-items: center;
+  color: var(--matrix-green-dark);
+}
+
+.connector-line {
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--matrix-green-dark));
+}
+
+.connector-arrow {
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .radar-container {
+    transform: scale(0.8);
+  }
+  
+  .tech-pipeline {
+    flex-direction: column;
+  }
+  
+  .pipeline-connector {
+    transform: rotate(90deg);
+  }
+}

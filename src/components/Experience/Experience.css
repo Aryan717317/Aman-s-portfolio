@@ -1,0 +1,324 @@
+.experience-section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+  position: relative;
+  z-index: 10;
+}
+
+/* Boot Screen */
+.boot-screen {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background: #0d0d0d;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.boot-screen.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.boot-label {
+  font-size: 0.9rem;
+  color: var(--matrix-green);
+  font-weight: 600;
+}
+
+.boot-status {
+  font-size: 0.75rem;
+  color: var(--matrix-green-dim);
+  animation: pulse 1s infinite;
+}
+
+.boot-progress {
+  height: 4px;
+  background: rgba(0, 255, 65, 0.1);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.boot-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--matrix-green-dark), var(--matrix-green));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--matrix-green);
+}
+
+.boot-logs {
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.log-entry {
+  display: flex;
+  gap: 15px;
+  color: var(--matrix-green-dim);
+  animation: fadeIn 0.3s ease;
+}
+
+.log-entry.success {
+  color: var(--matrix-green);
+  font-weight: 500;
+}
+
+.log-time {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.log-text {
+  flex: 1;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.3s;
+}
+
+.timeline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-section {
+  margin-bottom: 50px;
+}
+
+.timeline-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--matrix-green);
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.section-icon {
+  font-size: 1.25rem;
+}
+
+/* Timeline Card */
+.timeline-card {
+  position: relative;
+  padding: 25px;
+  padding-left: 40px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  border-color: var(--matrix-green);
+  box-shadow: var(--glow-sm);
+  transform: translateX(10px);
+}
+
+.card-timeline-dot {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background: var(--matrix-green);
+  border-radius: 50%;
+  box-shadow: var(--glow-sm);
+}
+
+.card-timeline-dot::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: linear-gradient(to bottom, var(--matrix-green), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-card:last-child .card-timeline-dot::before {
+  display: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-white);
+  flex: 1;
+}
+
+.card-badge {
+  padding: 5px 12px;
+  background: rgba(0, 255, 65, 0.15);
+  border: 1px solid var(--matrix-green);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--matrix-green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: var(--matrix-green-dim);
+  margin-bottom: 8px;
+}
+
+.card-period {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.certification-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.certification-card:hover,
+.certification-card.hovered {
+  border-color: var(--matrix-green);
+  box-shadow: var(--glow-sm);
+  transform: translateY(-5px);
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 65, 0.1);
+  border: 2px solid var(--matrix-green);
+  border-radius: 50%;
+  color: var(--matrix-green);
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.cert-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.certification-card:hover .cert-glow {
+  left: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .boot-screen {
+    padding: 20px;
+  }
+  
+  .boot-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .timeline-card {
+    padding: 20px;
+    padding-left: 30px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+  }
+  
+  .card-badge {
+    align-self: flex-start;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
