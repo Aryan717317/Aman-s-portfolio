@@ -1,11 +1,13 @@
 .app {
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 main {
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 section {
@@ -14,6 +16,8 @@ section {
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #hero {
@@ -183,4 +187,47 @@ section {
 
 .fade-in {
   animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+    min-height: auto;
+  }
+  
+  #hero {
+    min-height: 100vh;
+    padding-top: 0;
+  }
+  
+  /* Disable X/Y transforms on mobile to prevent horizontal scroll issues */
+  #skills.section-animate,
+  #skills.section-animate.section-visible,
+  #projects.section-animate,
+  #projects.section-animate.section-visible,
+  #experience.section-animate,
+  #experience.section-animate.section-visible,
+  #ml-visuals.section-animate,
+  #ml-visuals.section-animate.section-visible,
+  #contact.section-animate,
+  #contact.section-animate.section-visible {
+    transform: none;
+  }
+  
+  /* Disable glow burst effect on mobile */
+  .section-animate.section-visible::after {
+    display: none;
+  }
+  
+  /* Reduce scan line effect on mobile */
+  .section-animate.section-visible::before {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 50px 10px;
+  }
 }

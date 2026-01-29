@@ -382,29 +382,36 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    overflow-x: hidden;
+  }
+  
   .hero-content {
-    max-width: 95%;
-    padding: 20px 15px;
-    padding-top: 60px;
-    margin-top: 40px;
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+    padding-top: 50px;
+    margin-top: 30px;
+    box-sizing: border-box;
   }
   
   .hero-title {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 8px var(--matrix-green);
   }
   
   .hero-badge {
-    font-size: 0.65rem;
-    padding: 6px 12px;
-    margin-bottom: 20px;
+    font-size: 0.6rem;
+    padding: 5px 10px;
+    margin-bottom: 15px;
   }
   
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     flex-direction: column;
-    gap: 5px;
-    margin-bottom: 20px;
+    gap: 3px;
+    margin-bottom: 15px;
   }
   
   .separator {
@@ -412,42 +419,77 @@
   }
   
   .hero-description {
-    font-size: 0.95rem;
-    padding: 15px;
-    line-height: 1.7;
-    margin-bottom: 25px;
+    font-size: 0.85rem;
+    padding: 12px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-shadow: none;
+    background: rgba(10, 10, 10, 0.85);
   }
   
   .hero-stats {
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  
+  .stat {
+    flex: 1;
+    min-width: auto;
   }
   
   .stat-value {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--matrix-green);
   }
   
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
   }
   
   .hero-actions {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 0 15px;
   }
   
   .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     justify-content: center;
-    padding: 12px 24px;
-    font-size: 0.85rem;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .btn-primary {
+    box-shadow: none;
   }
   
   .scroll-indicator {
-    bottom: 20px;
+    bottom: 15px;
+    font-size: 0.6rem;
+  }
+  
+  .hex-pattern {
+    width: 250px;
+    height: 250px;
+    opacity: 0.3;
+  }
+  
+  .hex-pattern::before {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .hex-pattern::after {
+    width: 100px;
+    height: 100px;
+  }
+}
     font-size: 0.65rem;
   }
   

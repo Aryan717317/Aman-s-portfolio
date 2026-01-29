@@ -345,66 +345,120 @@
 }
 
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 15px;
+    overflow-x: hidden;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    text-shadow: 0 0 5px var(--matrix-green);
   }
   
   .section-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 0 10px;
   }
   
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  .skill-card {
-    padding: 20px;
-  }
-  
-  .skill-name {
-    font-size: 1rem;
-  }
-  
-  .skill-items {
-    gap: 6px;
-  }
-  
-  .skill-item {
-    font-size: 0.7rem;
-    padding: 4px 8px;
-  }
-  
-  .radar-container {
-    transform: scale(0.7);
-    margin: 20px auto;
-  }
-  
-  .tech-pipeline {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .pipeline-connector {
-    transform: rotate(90deg);
-  }
-  
-  .pipeline-stage {
-    padding: 10px 15px;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.5rem;
+    gap: 12px;
+    padding: 0 5px;
   }
   
   .skill-card {
     padding: 15px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .skill-card:hover {
+    transform: none;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+  }
+  
+  .skill-card-header {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  .skill-level {
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px var(--matrix-green);
+  }
+  
+  .skill-progress-glow {
+    box-shadow: 0 0 5px var(--matrix-green);
+  }
+  
+  .skill-items {
+    gap: 5px;
+  }
+  
+  .skill-item {
+    font-size: 0.65rem;
+    padding: 3px 6px;
   }
   
   .radar-container {
-    transform: scale(0.6);
+    transform: scale(0.65);
+    margin: 10px auto;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.05);
+  }
+  
+  .tech-pipeline {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 10px;
+  }
+  
+  .pipeline-connector {
+    transform: rotate(90deg);
+    height: 20px;
+  }
+  
+  .pipeline-stage {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 50px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .skill-card {
+    padding: 12px;
+  }
+  
+  .skill-name {
+    font-size: 0.85rem;
+  }
+  
+  .skill-level {
+    font-size: 1rem;
+  }
+  
+  .skill-item {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+  
+  .radar-container {
+    transform: scale(0.55);
   }
 }
