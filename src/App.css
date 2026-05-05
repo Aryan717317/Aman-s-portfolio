@@ -20,6 +20,92 @@ section {
   box-sizing: border-box;
 }
 
+/* Section accent system */
+#hero {
+  --section-accent: var(--matrix-green);
+  --section-accent-soft: rgba(49, 208, 126, 0.12);
+}
+
+#skills {
+  --section-accent: var(--accent-cyan);
+  --section-accent-soft: rgba(85, 199, 255, 0.12);
+}
+
+#projects {
+  --section-accent: var(--accent-amber);
+  --section-accent-soft: rgba(241, 176, 76, 0.12);
+}
+
+#ml-visuals {
+  --section-accent: var(--accent-violet);
+  --section-accent-soft: rgba(155, 140, 255, 0.12);
+}
+
+#experience {
+  --section-accent: var(--accent-rose);
+  --section-accent-soft: rgba(239, 122, 149, 0.12);
+}
+
+#contact {
+  --section-accent: var(--accent-slate);
+  --section-accent-soft: rgba(123, 135, 150, 0.12);
+}
+
+section .section-title,
+section .hero-title,
+section .modal-title {
+  color: var(--section-accent, var(--matrix-green));
+  text-shadow: 0 0 14px var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
+section .section-tag,
+section .hero-badge {
+  color: var(--section-accent, var(--matrix-green));
+  border-color: var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
+section .section-subtitle,
+section .hero-subtitle,
+section .hero-description,
+section .project-description,
+section .contact-value,
+section .skill-name,
+section .skill-item,
+section .metric-label,
+section .card-description li {
+  color: var(--text-secondary);
+}
+
+section .stat-value,
+section .skill-level,
+section .metric-value,
+section .metric-value-large {
+  color: var(--section-accent, var(--matrix-green));
+  text-shadow: 0 0 10px var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
+section .skill-card:hover,
+section .project-card:hover,
+section .timeline-card:hover,
+section .contact-card:hover,
+section .certification-card:hover {
+  border-color: var(--section-accent, var(--matrix-green));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24), 0 0 0 1px var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
+section .btn-primary,
+section .submit-btn {
+  background: var(--section-accent, var(--matrix-green));
+  color: #07110b;
+  border-color: var(--section-accent, var(--matrix-green));
+}
+
+section .btn-secondary,
+section .btn-outline {
+  color: var(--section-accent, var(--matrix-green));
+  border-color: var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
 #hero {
   padding-top: 0;
 }

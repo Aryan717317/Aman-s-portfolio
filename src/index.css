@@ -1,35 +1,41 @@
 /* ===== MATRIX PORTFOLIO - GLOBAL STYLES ===== */
 
 :root {
-  /* Matrix Color Palette */
-  --matrix-green: #00ff41;
-  --matrix-green-dim: #00cc33;
-  --matrix-green-dark: #008f11;
-  --matrix-green-glow: rgba(0, 255, 65, 0.5);
-  --matrix-green-subtle: rgba(0, 255, 65, 0.1);
+  /* Refined portfolio palette */
+  --matrix-green: #31d07e;
+  --matrix-green-dim: #18b56a;
+  --matrix-green-dark: #0f7a48;
+  --matrix-green-glow: rgba(49, 208, 126, 0.28);
+  --matrix-green-subtle: rgba(49, 208, 126, 0.12);
+  --accent-cyan: #55c7ff;
+  --accent-amber: #f1b04c;
+  --accent-rose: #ef7a95;
+  --accent-violet: #9b8cff;
+  --accent-slate: #7b8aa0;
   
   /* Background Colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #0d0d0d;
-  --bg-tertiary: #111111;
-  --bg-card: rgba(0, 255, 65, 0.03);
-  --bg-card-hover: rgba(0, 255, 65, 0.08);
+  --bg-primary: #0b0f14;
+  --bg-secondary: #11161d;
+  --bg-tertiary: #161c24;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
   
   /* Text Colors */
-  --text-primary: #00ff41;
-  --text-secondary: #00cc33;
-  --text-muted: #006622;
-  --text-white: #e0e0e0;
+  --text-primary: #e7edf5;
+  --text-secondary: #b7c1ce;
+  --text-muted: #7b8796;
+  --text-white: #f6f8fb;
   
   /* Accent Colors */
-  --accent-cyan: #00ffff;
-  --accent-purple: #bf00ff;
-  --accent-red: #ff0040;
-  --accent-orange: #ff6600;
+  --accent-cyan: #55c7ff;
+  --accent-purple: #9b8cff;
+  --accent-red: #ef7a95;
+  --accent-orange: #f1b04c;
   
   /* Fonts */
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-display: 'IBM Plex Serif', 'Georgia', serif;
   
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -44,14 +50,14 @@
   --transition-slow: 0.5s ease;
   
   /* Borders */
-  --border-subtle: 1px solid rgba(0, 255, 65, 0.2);
-  --border-glow: 1px solid var(--matrix-green);
+  --border-subtle: 1px solid rgba(123, 135, 150, 0.22);
+  --border-glow: 1px solid rgba(49, 208, 126, 0.5);
   
   /* Shadows */
-  --glow-sm: 0 0 10px var(--matrix-green-glow);
-  --glow-md: 0 0 20px var(--matrix-green-glow);
-  --glow-lg: 0 0 40px var(--matrix-green-glow);
-  --text-glow: 0 0 10px var(--matrix-green), 0 0 20px var(--matrix-green), 0 0 30px var(--matrix-green);
+  --glow-sm: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 18px var(--matrix-green-glow);
+  --glow-md: 0 12px 36px rgba(0, 0, 0, 0.26), 0 0 28px var(--matrix-green-glow);
+  --glow-lg: 0 20px 60px rgba(0, 0, 0, 0.34), 0 0 42px var(--matrix-green-glow);
+  --text-glow: 0 0 10px rgba(49, 208, 126, 0.28), 0 0 24px rgba(49, 208, 126, 0.16);
 }
 
 /* ===== RESET & BASE ===== */
@@ -67,14 +73,15 @@ html {
 }
 
 body {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   background-color: var(--bg-primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
 /* Hide scrollbar but keep functionality */
@@ -111,6 +118,40 @@ section {
 main {
   position: relative;
   z-index: 1;
+}
+
+/* Typography system */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.hero-title,
+.modal-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+p,
+li,
+label,
+input,
+textarea,
+button,
+.section-subtitle,
+.hero-description,
+.project-description,
+.contact-value,
+.skill-name,
+.skill-item,
+.metric-label,
+.copyright,
+.built-with,
+.card-description li,
+.form-group label {
+  font-family: var(--font-body);
 }
 
 /* ===== LINKS ===== */
