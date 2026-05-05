@@ -28,8 +28,8 @@ export const portfolioData = {
   location: "Dehradun, India",
   phone: "+91 7906012018",
   email: "ar22073yan@gmail.com",
-  linkedin: "https://linkedin.com/in/aryan-bharat",
-  github: "https://github.com/aryan-bharat",
+  linkedin: "https://linkedin.com/in/aman-bharat",
+  github: "https://github.com/aman-bharat",
   
   summary: `Analytical Computer Science Engineering student specializing in AI & ML with expertise in SQL data extraction and Python analytics. Proven track record of transforming complex datasets into actionable business insights and improving process efficiency by up to 70%. Skilled in Advanced Excel, statistical modeling, and AWS cloud tools.`,
   

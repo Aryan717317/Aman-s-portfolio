@@ -148,9 +148,9 @@ ${portfolioData.certifications.map(c => `  ✓ ${c.name}
   │                                                            │
   │   📍 Location: ${portfolioData.location}                   │
   │                                                            │
-  │   🔗 GitHub:   github.com/aryan-bharat                     │
+  │   🔗 GitHub:   github.com/aman-bharat                     │
   │                                                            │
-  │   💼 LinkedIn: linkedin.com/in/aryan-bharat                │
+  │   💼 LinkedIn: linkedin.com/in/aman-bharat                │
   │                                                            │
   └────────────────────────────────────────────────────────────┘
 
@@ -162,7 +162,7 @@ Ready to collaborate on ML projects!
     neofetch: () => ({
       type: 'neofetch',
       content: `
-        ██╗███╗   ███╗██╗          aryan@ml-portfolio
+        ██╗███╗   ███╗██╗          aman@ml-portfolio
         ███║████╗ ████║██║          ──────────────────
         ╚██║██╔████╔██║██║          OS: Neural Network v2.0
          ██║██║╚██╔╝██║██║          Host: Brain.exe
@@ -170,7 +170,7 @@ Ready to collaborate on ML projects!
          ╚═╝╚═╝     ╚═╝╚══════╝     Shell: TensorFlow/Keras
                                     Resolution: 1920x1080
         ┌────────────────────┐      DE: React 18
-        │  ARYAN BHARAT      │      WM: Vite
+        │  aman BHARAT      │      WM: Vite
         │  ML ENGINEER       │      Theme: Matrix [Dark]
         │  AI SPECIALIST     │      Terminal: Custom Shell
         └────────────────────┘      CPU: 8.5 CGPA @ CU
@@ -184,7 +184,7 @@ Ready to collaborate on ML projects!
       type: 'whoami',
       content: `
 ┌─────────────────────────────────────────────────────────────┐
-│  User: aryan_bharat                                         │
+│  User: aman_bharat                                         │
 │  User: aman_bharat                                          │
 │  Role: Machine Learning Engineer                            │
 │  Access Level: ADMIN                                        │
@@ -387,7 +387,7 @@ ${Object.entries(p.metrics).map(([k, v]) => `  ${k.toUpperCase()}: ${v}`).join('
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 
-Welcome to Aryan's interactive portfolio terminal.
+Welcome to aman's interactive portfolio terminal.
 Welcome to Aman's interactive portfolio terminal.
 Type 'help' to see available commands.
 Press ESC to close this terminal.
@@ -404,7 +404,7 @@ Press ESC to close this terminal.
             <button className="terminal-btn minimize" />
             <button className="terminal-btn maximize" />
           </div>
-          <div className="terminal-title">aryan@ml-portfolio: ~</div>
+          <div className="terminal-title">aman@ml-portfolio: ~</div>
                     <div className="terminal-title">aman@ml-portfolio: ~</div>
           <div className="terminal-actions">
             <button className="terminal-close-btn" onClick={onClose}>×</button>
@@ -416,7 +416,7 @@ Press ESC to close this terminal.
             <div key={index} className="terminal-entry">
               {item.input && (
                 <div className="terminal-input-line">
-                  <span className="prompt">aryan@portfolio:~$</span>
+                  <span className="prompt">aman@portfolio:~$</span>
                               <span className="prompt">aman@portfolio:~$</span>
                               <span className="prompt">aman@portfolio:~$</span>
                   <span className="input-text">{item.input}</span>
@@ -435,7 +435,7 @@ Press ESC to close this terminal.
           ))}
           
           <form onSubmit={handleSubmit} className="terminal-input-form">
-            <span className="prompt">aryan@portfolio:~$</span>
+            <span className="prompt">aman@portfolio:~$</span>
             <input
               ref={inputRef}
               type="text"
@@ -498,7 +498,7 @@ Accuracy: ${(accuracy * 100).toFixed(2)}% ${'▓'.repeat(Math.round(accuracy * 2
 
 ${epoch >= 10 ? `
 ✓ Training Complete!
-✓ Model saved to: ./models/aryan_nn_v1.h5
+✓ Model saved to: ./models/aman_nn_v1.h5
 ✓ Model saved to: ./models/aman_nn_v1.h5
 ✓ Best accuracy achieved: 95.2%
 ` : 'Training in progress...'}

@@ -199,7 +199,7 @@ const MatrixLoader = ({ onComplete }) => {
               );
             })}
             <div className="cursor-line">
-              <span className="prompt">aryan@ml-system:~$</span>
+              <span className="prompt">aman@ml-system:~$</span>
               <span className="cursor-block">_</span>
             </div>
           </div>
