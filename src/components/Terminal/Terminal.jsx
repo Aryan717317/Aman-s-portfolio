@@ -162,20 +162,19 @@ Ready to collaborate on ML projects!
     neofetch: () => ({
       type: 'neofetch',
       content: `
-        ██╗███╗   ███╗██╗          aman@ml-portfolio
-        ███║████╗ ████║██║          ──────────────────
-        ╚██║██╔████╔██║██║          OS: Neural Network v2.0
-         ██║██║╚██╔╝██║██║          Host: Brain.exe
-         ██║██║ ╚═╝ ██║███████╗     Kernel: Python 3.11
-         ╚═╝╚═╝     ╚═╝╚══════╝     Shell: TensorFlow/Keras
-                                    Resolution: 1920x1080
-        ┌────────────────────┐      DE: React 18
-        │  aman BHARAT      │      WM: Vite
-        │  ML ENGINEER       │      Theme: Matrix [Dark]
-        │  AI SPECIALIST     │      Terminal: Custom Shell
-        └────────────────────┘      CPU: 8.5 CGPA @ CU
-                                    GPU: AWS Lambda
-                                    Memory: 100K+ Data Points
+       █████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+      ██╔══██╗████╗ ████║██╔══██╗████╗  ██║   aman@ml-portfolio
+      ███████║██╔████╔██║███████║██╔██╗ ██║   ─────────────────
+      ██╔══██║██║╚██╔╝██║██╔══██║██║╚██╗██║   OS: AMAN_OS v2.0
+      ██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   Kernel: Python 3.11
+      ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   Shell: TensorFlow/Keras
+                                              DE: React 18
+        ┌────────────────────┐                WM: Vite
+        │  AMAN BHARAT       │                Theme: Matrix [Dark]
+        │  ML ENGINEER       │                Terminal: Custom Shell
+        │  AI SPECIALIST     │                CPU: 7.7 CGPA @ DIT
+        └────────────────────┘                GPU: AWS Lambda
+                                              
         ████████████████████████
 `
     }),
@@ -387,7 +386,6 @@ ${Object.entries(p.metrics).map(([k, v]) => `  ${k.toUpperCase()}: ${v}`).join('
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 
-Welcome to aman's interactive portfolio terminal.
 Welcome to Aman's interactive portfolio terminal.
 Type 'help' to see available commands.
 Press ESC to close this terminal.

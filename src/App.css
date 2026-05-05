@@ -22,34 +22,9 @@ section {
 }
 
 /* Section accent system */
-#hero {
+#hero, #skills, #projects, #ml-visuals, #experience, #contact {
   --section-accent: var(--matrix-green);
   --section-accent-soft: rgba(49, 208, 126, 0.12);
-}
-
-#skills {
-  --section-accent: var(--accent-cyan);
-  --section-accent-soft: rgba(85, 199, 255, 0.12);
-}
-
-#projects {
-  --section-accent: var(--accent-amber);
-  --section-accent-soft: rgba(241, 176, 76, 0.12);
-}
-
-#ml-visuals {
-  --section-accent: var(--accent-violet);
-  --section-accent-soft: rgba(155, 140, 255, 0.12);
-}
-
-#experience {
-  --section-accent: var(--accent-rose);
-  --section-accent-soft: rgba(239, 122, 149, 0.12);
-}
-
-#contact {
-  --section-accent: var(--accent-slate);
-  --section-accent-soft: rgba(123, 135, 150, 0.12);
 }
 
 section .section-title,

@@ -80,7 +80,6 @@ const Experience = () => {
         <div className={`boot-screen ${isVisible ? 'visible' : ''}`}>
           <div className="boot-header">
             <span className="boot-label">AMAN_OS v2.0</span>
-                        <span className="boot-label">AMAN_OS v2.0</span>
             <span className="boot-status">
               {bootProgress < 100 ? 'BOOTING...' : 'READY'}
             </span>
