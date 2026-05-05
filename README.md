@@ -1,5 +1,4 @@
-# Aryan's Matrix-Style ML Portfolio 🧠💚
-# Aman's Matrix-Style ML Portfolio 🧠💚
+# Aman's Matrix-Style ML Portfolio 🧠
 
 A cutting-edge, Matrix-themed interactive Machine Learning portfolio website built with React, Three.js, and modern web technologies.
 
