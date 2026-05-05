@@ -375,6 +375,7 @@ const Hero = ({ onTerminalOpen, isMobile }) => {
     // Create a text-based resume download since we don't have the actual PDF
     const resumeContent = `
 ARYAN BHARAT KUMAR
+Aman Bharat Kumar
 Machine Learning Engineer | AI & Data Systems
 
 Contact: ar22073yan@gmail.com | +91 7906012018
@@ -405,6 +406,7 @@ ${portfolioData.certifications.map(c => `- ${c.name} (${c.issuer})`).join('\n')}
     const a = document.createElement('a')
     a.href = url
     a.download = 'Aryan_Bharat_Kumar_Resume.txt'
+      a.download = 'Aman_Bharat_Kumar_Resume.txt'
     a.click()
     URL.revokeObjectURL(url)
   }

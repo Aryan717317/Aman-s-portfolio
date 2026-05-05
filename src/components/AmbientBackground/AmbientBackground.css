@@ -1,0 +1,86 @@
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(85, 199, 255, 0.11), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(155, 140, 255, 0.1), transparent 26%),
+    radial-gradient(circle at 50% 80%, rgba(49, 208, 126, 0.08), transparent 30%),
+    linear-gradient(180deg, #0b0f14 0%, #0f141c 48%, #0b0f14 100%);
+}
+
+.ambient-base,
+.ambient-grid,
+.ambient-vignette,
+.ambient-noise,
+.orb {
+  position: absolute;
+  inset: 0;
+}
+
+.ambient-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 34%, transparent 100%);
+  opacity: 0.3;
+}
+
+.ambient-vignette {
+  background: radial-gradient(circle at center, transparent 0%, rgba(4, 6, 10, 0.3) 55%, rgba(4, 6, 10, 0.82) 100%);
+}
+
+.ambient-noise {
+  opacity: 0.08;
+  background-image:
+    linear-gradient(transparent 49%, rgba(255, 255, 255, 0.04) 50%, transparent 51%),
+    linear-gradient(90deg, transparent 49%, rgba(255, 255, 255, 0.03) 50%, transparent 51%);
+  background-size: 3px 3px, 4px 4px;
+  mix-blend-mode: soft-light;
+}
+
+.orb {
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
+  filter: blur(42px);
+  mix-blend-mode: screen;
+}
+
+.orb-a {
+  top: 8%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(85, 199, 255, 0.3) 0%, rgba(85, 199, 255, 0.08) 38%, transparent 72%);
+}
+
+.orb-b {
+  top: 35%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(155, 140, 255, 0.25) 0%, rgba(155, 140, 255, 0.08) 36%, transparent 72%);
+}
+
+.orb-c {
+  bottom: -6%;
+  left: 26%;
+  background: radial-gradient(circle, rgba(49, 208, 126, 0.24) 0%, rgba(49, 208, 126, 0.08) 38%, transparent 72%);
+}
+
+@media (max-width: 768px) {
+  .ambient-grid,
+  .ambient-noise {
+    opacity: 0.18;
+  }
+
+  .orb {
+    width: 42vw;
+    height: 42vw;
+    filter: blur(34px);
+  }
+
+  .orb-c {
+    left: 18%;
+  }
+}

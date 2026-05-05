@@ -185,6 +185,7 @@ Ready to collaborate on ML projects!
       content: `
 ┌─────────────────────────────────────────────────────────────┐
 │  User: aryan_bharat                                         │
+│  User: aman_bharat                                          │
 │  Role: Machine Learning Engineer                            │
 │  Access Level: ADMIN                                        │
 │  Status: ACTIVE                                             │
@@ -387,6 +388,7 @@ ${Object.entries(p.metrics).map(([k, v]) => `  ${k.toUpperCase()}: ${v}`).join('
 ╚═══════════════════════════════════════════════════════════════╝
 
 Welcome to Aryan's interactive portfolio terminal.
+Welcome to Aman's interactive portfolio terminal.
 Type 'help' to see available commands.
 Press ESC to close this terminal.
 `
@@ -403,6 +405,7 @@ Press ESC to close this terminal.
             <button className="terminal-btn maximize" />
           </div>
           <div className="terminal-title">aryan@ml-portfolio: ~</div>
+                    <div className="terminal-title">aman@ml-portfolio: ~</div>
           <div className="terminal-actions">
             <button className="terminal-close-btn" onClick={onClose}>×</button>
           </div>
@@ -414,6 +417,8 @@ Press ESC to close this terminal.
               {item.input && (
                 <div className="terminal-input-line">
                   <span className="prompt">aryan@portfolio:~$</span>
+                              <span className="prompt">aman@portfolio:~$</span>
+                              <span className="prompt">aman@portfolio:~$</span>
                   <span className="input-text">{item.input}</span>
                 </div>
               )}
@@ -494,6 +499,7 @@ Accuracy: ${(accuracy * 100).toFixed(2)}% ${'▓'.repeat(Math.round(accuracy * 2
 ${epoch >= 10 ? `
 ✓ Training Complete!
 ✓ Model saved to: ./models/aryan_nn_v1.h5
+✓ Model saved to: ./models/aman_nn_v1.h5
 ✓ Best accuracy achieved: 95.2%
 ` : 'Training in progress...'}
 `}

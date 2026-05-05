@@ -10,7 +10,7 @@ const MatrixLoader = ({ onComplete }) => {
   const [glitchActive, setGlitchActive] = useState(false)
   const { reducedMotion } = useMotion()
 
-  const mainText = "Initializing Aryan's Portfolio..."
+  const mainText = "Initializing Aman's Portfolio..."
   
   const logs = [
     ">> Booting neural network subsystem...",

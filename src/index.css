@@ -311,11 +311,11 @@ button {
   
   /* Reduce glow intensity on mobile for better readability */
   :root {
-    --matrix-green-glow: rgba(0, 255, 65, 0.25);
-    --glow-sm: 0 0 5px rgba(0, 255, 65, 0.2);
-    --glow-md: 0 0 10px rgba(0, 255, 65, 0.2);
-    --glow-lg: 0 0 15px rgba(0, 255, 65, 0.2);
-    --text-glow: 0 0 5px var(--matrix-green);
+    --matrix-green-glow: rgba(49, 208, 126, 0.18);
+    --glow-sm: 0 0 5px rgba(49, 208, 126, 0.14);
+    --glow-md: 0 0 10px rgba(49, 208, 126, 0.14);
+    --glow-lg: 0 0 15px rgba(49, 208, 126, 0.14);
+    --text-glow: 0 0 5px rgba(49, 208, 126, 0.18);
   }
 }
 

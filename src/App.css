@@ -18,6 +18,7 @@ section {
   padding: 80px 20px;
   overflow-x: hidden;
   box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.002));
 }
 
 /* Section accent system */
@@ -104,6 +105,10 @@ section .btn-secondary,
 section .btn-outline {
   color: var(--section-accent, var(--matrix-green));
   border-color: var(--section-accent-soft, rgba(49, 208, 126, 0.12));
+}
+
+.section-animate::after {
+  opacity: 0.7;
 }
 
 #hero {

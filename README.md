@@ -1,4 +1,5 @@
 # Aryan's Matrix-Style ML Portfolio 🧠💚
+# Aman's Matrix-Style ML Portfolio 🧠💚
 
 A cutting-edge, Matrix-themed interactive Machine Learning portfolio website built with React, Three.js, and modern web technologies.
 
@@ -147,6 +148,7 @@ MIT License - Feel free to use this as a template!
 ## 👤 Author
 
 **Aryan Bharat Kumar**
+**Aman Bharat Kumar**
 - Machine Learning Engineer
 - AI & Data Systems Specialist
 - [GitHub](https://github.com/aryan-bharat)

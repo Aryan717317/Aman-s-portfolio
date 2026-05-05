@@ -9,6 +9,7 @@ import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact'
 import Navigation from './components/Navigation/Navigation'
 import AccessibilityToggle from './components/AccessibilityToggle/AccessibilityToggle'
+import AmbientBackground from './components/AmbientBackground/AmbientBackground'
 import './App.css'
 
 // Context for reduced motion preference
@@ -21,7 +22,7 @@ export const useMotion = () => useContext(MotionContext)
 
 // Portfolio data from resume
 export const portfolioData = {
-  name: "Aryan Bharat Kumar",
+  name: "Aman Bharat Kumar",
   title: "Machine Learning Engineer",
   subtitle: "AI & Data Systems Specialist",
   location: "Dehradun, India",
@@ -116,10 +117,10 @@ export const portfolioData = {
   
   education: [
     {
-      institution: "Chandigarh University",
+      institution: "Dehradun Institute of Technology",
       degree: "Bachelor of Engineering in Computer Science (AI & ML)",
       period: "Sep 2022 – Jul 2026",
-      grade: "CGPA: 8.5/10"
+      grade: "CGPA: 7.7/10"
     },
     {
       institution: "International Indian School",
@@ -237,13 +238,7 @@ function App() {
           <MatrixLoader onComplete={handleLoadComplete} />
         ) : (
           <>
-            {/* Overlay Effects */}
-            {!reducedMotion && (
-              <>
-                <div className="scanline-overlay" />
-                <div className="noise-overlay" />
-              </>
-            )}
+            <AmbientBackground reducedMotion={reducedMotion} />
             
             {/* Navigation */}
             <Navigation 
